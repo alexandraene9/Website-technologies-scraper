@@ -6,14 +6,14 @@
 - HTTP, browser, DNS and TLS results are all cached under `output/raw/`.
 - The README is written and now includes the honest results, implementation choices, problems and the three debate topics.
 - TypeScript typecheck passes and 6 unit tests pass.
-- The repo still needs final review and a GitHub push.
+- Final documentation is pushed to GitHub in commit cc46a79.
 
 ## Next steps
 
 1. Review the README once more and change wording where needed.
 2. Check suspicious detections in `output/results.json` or `output/summary.json`.
 3. Confirm there are no personal or temporary paths in final files.
-4. Commit the final changes and push them to GitHub.
+4. Perform one last review for the interview and submission.
 
 ## Decisions
 
