@@ -73,3 +73,12 @@ test("selector prefilter keeps possible matches and skips impossible ones", asyn
   assert.equal(mayMatch(buildPrefilter("iframe[src*='hubspot.com']"), idx), false);
   assert.equal(mayMatch(buildPrefilter("body > div"), idx), true);
 });
+
+test("extra pages prefer shop, cart, blog and contact links on the same site", async () => {
+  const { pickInternalPages } = await import("../src/collectors/pagesCollector.js");
+  const html = `<a href="/">Home</a><a href="/about-us">About</a><a href="https://other.com/products/x">Ext</a>
+    <a href="/collections/all">Shop</a><a href="/files/brochure.pdf">PDF</a><a href="https://www.example.com/cart">Cart</a>
+    <a href="mailto:a@example.com">Mail</a><a href="/blog/post-1">Blog</a>`;
+  const picked = pickInternalPages(html, "https://example.com/", 3);
+  assert.deepEqual(picked, ["https://example.com/collections/all", "https://www.example.com/cart", "https://example.com/blog/post-1"]);
+});

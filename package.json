@@ -15,7 +15,8 @@
     "fingerprints:update": "tsx scripts/update-fingerprints.ts",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "rescan:browser": "tsx src/index.ts scan --refresh browser"
+    "rescan:browser": "tsx src/index.ts scan --refresh browser",
+    "rescan:pages": "tsx src/index.ts scan --refresh pages"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

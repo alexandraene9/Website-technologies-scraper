@@ -22,7 +22,7 @@ npm run typecheck          # tsc --noEmit
 
 On Windows PowerShell, `npm run x -- --flag` drops the `--`; use `npx tsx src/index.ts scan --flag` or a dedicated npm script (`npm run rescan:browser`).
 
-Flags: `--limit N`, `--only a.com,b.com`, `--fresh`, `--refresh browser,dns` (re-collect only those layers), `--input file.txt`.
+Flags: `--limit N`, `--only a.com,b.com`, `--fresh`, `--refresh browser,dns,pages` (re-collect only those layers), `--no-pages`, `--input file.txt`.
 
 ## Architecture (keep it this way)
 
@@ -30,7 +30,7 @@ Flags: `--limit N`, `--only a.com,b.com`, `--fresh`, `--refresh browser,dns` (re
 - `src/engine/*` only turns signals into detections. No network here.
 - Raw data is cached per domain in `output/raw/<domain>.json.gz`. A scan only collects layers missing from the cache unless `--fresh` is passed.
 - `src/output/summary.ts` measures each layer's contribution by re-running detection on layer subsets.
-- Fingerprints in `data/fingerprints/` are vendored upstream data. Never edit them by hand. Put own rules in `data/custom/technologies.json` (same schema, merged at load).
+- Fingerprints in `data/fingerprints/` are vendored upstream data. Never edit them by hand. Put own rules in `data/custom/technologies.json` (same schema, merged at load; `"$replace": [fields]` replaces those upstream fields instead of merging).
 
 ## Conventions
 

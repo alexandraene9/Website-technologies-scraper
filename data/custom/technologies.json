@@ -1,9 +1,193 @@
 {
-  "$comment": "Own signatures in the same schema as data/fingerprints. Merged over the upstream definitions at load time (arrays are concatenated, objects merged). Found by listing third-party hosts that no existing rule explained.",
+  "$comment": "Own signatures in the same schema as data/fingerprints. Merged over the upstream definitions at load time (arrays are concatenated, objects merged). Found with the discoveryCandidates report in output/summary.json (signals no rule explained) and by inspecting the Shopify stores in the dataset. Entries with \"$replace\" swap those upstream fields for stricter patterns; these fix false positives found in the manual precision check (see README).",
   "Canva": {
-    "xhr": ["canva-embed\\.com"]
+    "xhr": [
+      "canva-embed\\.com"
+    ],
+    "dns": {
+      "TXT": [
+        "^canva-domain-verify="
+      ]
+    }
   },
   "Font Awesome": {
-    "xhr": ["(?:ka-f|kit|use|ka-p)\\.fontawesome\\.com"]
+    "xhr": [
+      "(?:ka-f|kit|use|ka-p)\\.fontawesome\\.com"
+    ]
+  },
+  "Shopify theme": {
+    "cats": [
+      81
+    ],
+    "description": "The Shopify theme a store is built on, read from the theme schema Shopify prints into every storefront. The version field holds the theme name and its version.",
+    "website": "https://themes.shopify.com",
+    "requires": [
+      "Shopify"
+    ],
+    "scripts": [
+      "Shopify\\.theme\\s*=\\s*\\{[^}]*\"schema_name\":\"([^\"]+)\",\"schema_version\":\"([^\"]+)\"\\;version:\\1 \\2"
+    ]
+  },
+  "Shop (Follow on Shop)": {
+    "cats": [
+      100
+    ],
+    "description": "Shopify's Shop app integration that lets customers follow the store in the Shop app.",
+    "website": "https://shop.app",
+    "requires": [
+      "Shopify"
+    ],
+    "scriptSrc": [
+      "shop-js/modules/v2/(?:loader|client)\\.shop-follow-button"
+    ]
+  },
+  "Google & YouTube for Shopify": {
+    "cats": [
+      100,
+      10
+    ],
+    "description": "Google's Shopify sales channel app. It syncs products to Google Merchant Center and sends storefront events to Merchant Center analytics.",
+    "website": "https://apps.shopify.com/google",
+    "requires": [
+      "Shopify"
+    ],
+    "xhr": [
+      "merchant-center-analytics\\.goog"
+    ]
+  },
+  "Google Search Console": {
+    "cats": [
+      54
+    ],
+    "description": "Google's tool for monitoring a site in Google Search. Site owners prove ownership with a TXT record.",
+    "website": "https://search.google.com/search-console",
+    "dns": {
+      "TXT": [
+        "^google-site-verification="
+      ]
+    }
+  },
+  "KnowBe4": {
+    "cats": [
+      16
+    ],
+    "description": "Security awareness training and simulated phishing platform.",
+    "website": "https://www.knowbe4.com",
+    "dns": {
+      "TXT": [
+        "^knowbe4-site-verification="
+      ]
+    }
+  },
+  "Sophos": {
+    "cats": [
+      16
+    ],
+    "description": "Sophos security products (email, endpoint and firewall). Domains are verified with a TXT record.",
+    "website": "https://www.sophos.com",
+    "dns": {
+      "TXT": [
+        "^sophos-domain-verification="
+      ]
+    }
+  },
+  "Validity": {
+    "cats": [
+      75
+    ],
+    "description": "Email deliverability and data quality platform (Everest, Return Path).",
+    "website": "https://www.validity.com",
+    "dns": {
+      "TXT": [
+        "^validity-domain-verification="
+      ]
+    }
+  },
+  "PeopleXD": {
+    "cats": [
+      101
+    ],
+    "description": "HR, payroll and recruitment software by Access Group.",
+    "website": "https://www.theaccessgroup.com",
+    "dns": {
+      "TXT": [
+        "^peoplexd-domain-verification="
+      ]
+    }
+  },
+  "MailerLite": {
+    "dns": {
+      "TXT": [
+        "^mailerlite-domain-verification="
+      ]
+    }
+  },
+  "Pinterest": {
+    "dns": {
+      "TXT": [
+        "^pinterest-site-verification="
+      ]
+    }
+  },
+  "Sitecore": {
+    "dns": {
+      "TXT": [
+        "^sitecore-domain-verification="
+      ]
+    }
+  },
+  "Wix": {
+    "excludes": [
+      "WordPress.com",
+      "WordPress",
+      "Sirvoy",
+      "Store Vantage"
+    ]
+  },
+  "Trident AB": {
+    "$replace": [
+      "scripts"
+    ],
+    "scripts": [
+      "tridentab\\.com"
+    ],
+    "scriptSrc": [
+      "tridentab\\.com"
+    ]
+  },
+  "Onsen UI": {
+    "$replace": [
+      "scriptSrc"
+    ],
+    "scriptSrc": [
+      "(?:^|/)(?:angular-)?onsenui(?:\\.min)?\\.js"
+    ]
+  },
+  "Stimulus": {
+    "$replace": [
+      "html"
+    ],
+    "html": [
+      "<[^>]+data-action=\"[^\"]*->[^\"]*#"
+    ]
+  },
+  "parallax.js": {
+    "$replace": [
+      "scriptSrc"
+    ],
+    "scriptSrc": [
+      "/(?:jquery\\.)?parallax(?:\\.min)?\\.js(?:\\?v(?:er)?=((?:\\d+\\.)+\\d+))?\\;version:\\1"
+    ]
+  },
+  "Bootstrap": {
+    "$replace": [
+      "scriptSrc"
+    ],
+    "scriptSrc": [
+      "/bootstrap(?:\\.bundle)?(?:[.-]([\\d.]+))?(?:\\.min)?\\.js\\;version:\\1",
+      "/bootstrap/([\\d.]+)/(?:js/)?bootstrap\\;version:\\1",
+      "bootstrap@([\\d.]+)\\;version:\\1",
+      "/react-bootstrap(?:\\.min)?\\.js"
+    ]
   }
 }

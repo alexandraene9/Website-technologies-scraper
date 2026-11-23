@@ -1,4 +1,4 @@
-export type Layer = "http" | "browser" | "dns" | "tls";
+export type Layer = "http" | "browser" | "dns" | "tls" | "pages";
 
 export interface PageSignals {
   layer: Layer;

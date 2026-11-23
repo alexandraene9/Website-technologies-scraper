@@ -118,7 +118,10 @@ export function loadFingerprints(dir: string, customFile?: string): FingerprintD
     const custom = JSON.parse(fs.readFileSync(customFile, "utf8"));
     for (const [name, def] of Object.entries(custom)) {
       if (name.startsWith("$")) continue;
-      raw[name] = raw[name] ? mergeDefs(raw[name], def) : def;
+      const { $replace, ...rest } = def as Record<string, unknown> & { $replace?: string[] };
+      const base = raw[name] ? { ...raw[name] } : undefined;
+      if (base && Array.isArray($replace)) for (const field of $replace) delete base[field];
+      raw[name] = base ? mergeDefs(base, rest) : rest;
     }
   }
   const techs = new Map<string, Tech>();

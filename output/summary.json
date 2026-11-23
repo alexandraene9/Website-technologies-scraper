@@ -1,39 +1,44 @@
 {
-  "generatedAt": "2026-11-23T15:01:26.524Z",
+  "generatedAt": "2026-11-23T16:46:06.650Z",
   "domains": 200,
   "status": {
     "ok": 190,
-    "partial": 10,
-    "unreachable": 0
+    "partial": 8,
+    "unreachable": 2
   },
-  "distinctTechnologies": 451,
-  "domainTechnologyPairs": 2994,
+  "distinctTechnologies": 459,
+  "domainTechnologyPairs": 3058,
   "minConfidence": 50,
   "lowConfidence": {
-    "distinctTechnologies": 21,
-    "pairs": 132,
-    "distinctIncludingLowConfidence": 462
+    "distinctTechnologies": 22,
+    "pairs": 135,
+    "distinctIncludingLowConfidence": 470
   },
   "cumulativeByLayer": [
     {
       "layers": "http",
-      "distinctTechnologies": 286,
-      "domainTechnologyPairs": 2072
+      "distinctTechnologies": 284,
+      "domainTechnologyPairs": 2037
     },
     {
       "layers": "http + browser",
-      "distinctTechnologies": 400,
-      "domainTechnologyPairs": 2649
+      "distinctTechnologies": 399,
+      "domainTechnologyPairs": 2609
     },
     {
       "layers": "http + browser + dns",
-      "distinctTechnologies": 447,
-      "domainTechnologyPairs": 2863
+      "distinctTechnologies": 453,
+      "domainTechnologyPairs": 2877
     },
     {
       "layers": "http + browser + dns + tls",
-      "distinctTechnologies": 451,
-      "domainTechnologyPairs": 2994
+      "distinctTechnologies": 457,
+      "domainTechnologyPairs": 3008
+    },
+    {
+      "layers": "http + browser + dns + tls + pages",
+      "distinctTechnologies": 459,
+      "domainTechnologyPairs": 3058
     }
   ],
   "topTechnologies": [
@@ -43,27 +48,23 @@
     },
     {
       "name": "jQuery",
-      "count": 108
+      "count": 110
     },
     {
       "name": "Open Graph",
       "count": 106
     },
     {
-      "name": "MySQL",
-      "count": 81
-    },
-    {
-      "name": "PHP",
+      "name": "Priority Hints",
       "count": 79
     },
     {
-      "name": "Priority Hints",
-      "count": 76
+      "name": "MySQL",
+      "count": 78
     },
     {
-      "name": "WordPress",
-      "count": 75
+      "name": "PHP",
+      "count": 76
     },
     {
       "name": "Cloudflare",
@@ -74,12 +75,16 @@
       "count": 72
     },
     {
-      "name": "Google Font API",
-      "count": 69
+      "name": "WordPress",
+      "count": 72
     },
     {
       "name": "RSS",
-      "count": 68
+      "count": 70
+    },
+    {
+      "name": "Google Font API",
+      "count": 69
     },
     {
       "name": "jQuery Migrate",
@@ -95,7 +100,7 @@
     },
     {
       "name": "Font Awesome",
-      "count": 56
+      "count": 57
     },
     {
       "name": "core-js",
@@ -104,6 +109,10 @@
     {
       "name": "Google Analytics",
       "count": 51
+    },
+    {
+      "name": "Google Search Console",
+      "count": 46
     },
     {
       "name": "Cloudflare Bot Management",
@@ -130,23 +139,27 @@
       "count": 37
     },
     {
-      "name": "Bootstrap",
-      "count": 34
+      "name": "Swiper",
+      "count": 36
     },
     {
-      "name": "Swiper",
-      "count": 33
+      "name": "reCAPTCHA",
+      "count": 32
     },
     {
       "name": "Yoast SEO",
       "count": 32
     },
     {
-      "name": "GoDaddy",
-      "count": 26
+      "name": "Google Maps",
+      "count": 30
     },
     {
-      "name": "reCAPTCHA",
+      "name": "Bootstrap",
+      "count": 28
+    },
+    {
+      "name": "GoDaddy",
       "count": 26
     },
     {
@@ -162,10 +175,6 @@
       "count": 21
     },
     {
-      "name": "Google Maps",
-      "count": 20
-    },
-    {
       "name": "Elementor",
       "count": 20
     },
@@ -179,7 +188,7 @@
     },
     {
       "name": "Cart Functionality",
-      "count": 18
+      "count": 19
     },
     {
       "name": "LiteSpeed",
@@ -192,36 +201,32 @@
     {
       "name": "Modernizr",
       "count": 17
-    },
-    {
-      "name": "jsDelivr",
-      "count": 15
     }
   ],
   "topCategories": [
     {
       "name": "JavaScript libraries",
-      "count": 520
+      "count": 539
     },
     {
       "name": "Miscellaneous",
-      "count": 293
+      "count": 295
     },
     {
       "name": "WordPress plugins",
-      "count": 196
+      "count": 199
     },
     {
       "name": "Font scripts",
-      "count": 191
+      "count": 192
     },
     {
       "name": "Security",
-      "count": 158
+      "count": 168
     },
     {
       "name": "CDN",
-      "count": 133
+      "count": 137
     },
     {
       "name": "SSL/TLS certificate authorities",
@@ -229,7 +234,7 @@
     },
     {
       "name": "Analytics",
-      "count": 117
+      "count": 119
     },
     {
       "name": "Web servers",
@@ -237,39 +242,43 @@
     },
     {
       "name": "CMS",
-      "count": 111
+      "count": 108
     },
     {
       "name": "Hosting",
       "count": 107
     },
     {
-      "name": "JavaScript frameworks",
-      "count": 93
+      "name": "Performance",
+      "count": 89
+    },
+    {
+      "name": "SEO",
+      "count": 88
     },
     {
       "name": "Programming languages",
-      "count": 90
+      "count": 87
     },
     {
-      "name": "Performance",
+      "name": "JavaScript frameworks",
       "count": 86
     },
     {
       "name": "Blogs",
-      "count": 85
-    },
-    {
-      "name": "Databases",
       "count": 82
     },
     {
+      "name": "Databases",
+      "count": 79
+    },
+    {
       "name": "Page builders",
-      "count": 75
+      "count": 78
     },
     {
       "name": "Email",
-      "count": 73
+      "count": 75
     },
     {
       "name": "Webmail",
@@ -281,19 +290,15 @@
     },
     {
       "name": "PaaS",
-      "count": 47
-    },
-    {
-      "name": "UI frameworks",
-      "count": 46
+      "count": 45
     },
     {
       "name": "Ecommerce",
-      "count": 44
+      "count": 45
     },
     {
-      "name": "SEO",
-      "count": 42
+      "name": "UI frameworks",
+      "count": 41
     },
     {
       "name": "Reverse proxies",
@@ -314,12 +319,28 @@
       "count": 8
     },
     {
-      "name": "tls: TLS/certificate",
-      "count": 2
+      "name": "dns: timeout",
+      "count": 3
     },
     {
       "name": "browser: timeout",
+      "count": 3
+    },
+    {
+      "name": "tls: timeout",
       "count": 2
+    },
+    {
+      "name": "http: timeout",
+      "count": 2
+    },
+    {
+      "name": "dns: DNS lookups failed over DoH and UDP",
+      "count": 1
+    },
+    {
+      "name": "tls: TLS/certificate",
+      "count": 1
     },
     {
       "name": "http: HTTP 409 at http://1stclairavewest.com/",
@@ -355,10 +376,6 @@
     },
     {
       "name": "http: HTTP 500 at https://antikebau.de/",
-      "count": 1
-    },
-    {
-      "name": "tls: timeout",
       "count": 1
     },
     {
@@ -418,23 +435,11 @@
       "count": 1
     },
     {
-      "name": "http: https://powercleaning.services/: fetch failed (ERR_HTTP2_STR",
-      "count": 1
-    },
-    {
-      "name": "browser: net::ERR_EMPTY_RESPONSE",
-      "count": 1
-    },
-    {
       "name": "http: HTTP 503 at https://www.sindacatobadanti.it/",
       "count": 1
     },
     {
       "name": "http: HTTP 403 at https://soziale-dreigliederung.de/",
-      "count": 1
-    },
-    {
-      "name": "http: timeout",
       "count": 1
     },
     {
@@ -450,21 +455,320 @@
     {
       "domain": "herbalwise.ie",
       "analytics": [
+        "Google & YouTube for Shopify",
         "Google Analytics",
         "TikTok Pixel"
       ],
+      "theme": "Unicorn 3.1.0",
+      "shopifyApps": [
+        "Google & YouTube for Shopify",
+        "Shop (Follow on Shop)"
+      ],
       "marketing": [
-        "Trident AB",
         "Zotabox"
+      ],
+      "payments": [
+        "American Express",
+        "Apple Pay",
+        "Google Pay",
+        "Klarna Checkout",
+        "Mastercard",
+        "PayPal",
+        "Shop Pay",
+        "Visa"
       ]
     },
     {
       "domain": "unnames.com",
       "analytics": [
         "Facebook Pixel",
+        "Google & YouTube for Shopify",
         "Google Analytics"
       ],
-      "marketing": []
+      "theme": "Dawn 15.4.0",
+      "shopifyApps": [
+        "Google & YouTube for Shopify"
+      ],
+      "marketing": [],
+      "payments": [
+        "Apple Pay",
+        "Google Pay",
+        "PayPal",
+        "Shop Pay"
+      ]
     }
-  ]
+  ],
+  "discoveryCandidates": {
+    "note": "Signals seen on these domains that no fingerprint explains yet. Candidates for new rules, ranked by number of domains.",
+    "thirdPartyHosts": [
+      {
+        "name": "gstatic.com",
+        "domains": 70,
+        "examples": [
+          "somalidisablesupport.com",
+          "xn--kleoghvidevareservice-qfc.dk",
+          "cytofastmed.com"
+        ]
+      },
+      {
+        "name": "google-analytics.com",
+        "domains": 26,
+        "examples": [
+          "katesworldtravel.com",
+          "doringpoort.com",
+          "fsbwyoming.com"
+        ]
+      },
+      {
+        "name": "google.ro",
+        "domains": 16,
+        "examples": [
+          "231selfstorage.com",
+          "fsbwyoming.com",
+          "jobresourcecentre.com"
+        ]
+      },
+      {
+        "name": "google.com",
+        "domains": 12,
+        "examples": [
+          "231selfstorage.com",
+          "fsbwyoming.com",
+          "avocatalinamanciu.ro"
+        ]
+      },
+      {
+        "name": "googleapis.com",
+        "domains": 11,
+        "examples": [
+          "imgs.co.jp",
+          "sgsextremaratio.it",
+          "infoaboutnetwork.com"
+        ]
+      },
+      {
+        "name": "wixapps.net",
+        "domains": 8,
+        "examples": [
+          "trs-energycontrol.de",
+          "gapconstructionwi.com",
+          "radxmobile.com"
+        ]
+      },
+      {
+        "name": "facebook.com",
+        "domains": 7,
+        "examples": [
+          "szentkristofudvarhaz.hu",
+          "katesworldtravel.com",
+          "253media.com"
+        ]
+      },
+      {
+        "name": "sqspcdn.com",
+        "domains": 6,
+        "examples": [
+          "largsbaychiropractic.com.au",
+          "cultivateventures.co.nz",
+          "orifoodsco.com"
+        ]
+      },
+      {
+        "name": "cloudflare.com",
+        "domains": 5,
+        "examples": [
+          "fsbwyoming.com",
+          "concrete-fitness.edan.io",
+          "1ststopsupply.com"
+        ]
+      },
+      {
+        "name": "secureserver.net",
+        "domains": 5,
+        "examples": [
+          "fsbwyoming.com",
+          "aaice.net",
+          "makpharma-eg.com"
+        ]
+      },
+      {
+        "name": "squarespace.com",
+        "domains": 4,
+        "examples": [
+          "largsbaychiropractic.com.au",
+          "cultivateventures.co.nz",
+          "jenniferbacksteininteriors.com"
+        ]
+      },
+      {
+        "name": "facebook.net",
+        "domains": 3,
+        "examples": [
+          "szentkristofudvarhaz.hu",
+          "phucankhanggroup.com",
+          "261welfarefund.com"
+        ]
+      },
+      {
+        "name": "ytimg.com",
+        "domains": 3,
+        "examples": [
+          "doringpoort.com",
+          "layer7innovations.ca",
+          "oakwell.vet"
+        ]
+      },
+      {
+        "name": "wsimg.com",
+        "domains": 3,
+        "examples": [
+          "fsbwyoming.com",
+          "aaice.net",
+          "cmc01village.com"
+        ]
+      },
+      {
+        "name": "typekit.net",
+        "domains": 3,
+        "examples": [
+          "253media.com",
+          "1planettechnologies.weebly.com",
+          "5rcircleprocess.weebly.com"
+        ]
+      },
+      {
+        "name": "clarity.ms",
+        "domains": 3,
+        "examples": [
+          "253media.com",
+          "restwellstreetmedicalcentre.com.au",
+          "11thhourracing.org"
+        ]
+      },
+      {
+        "name": "sentry.io",
+        "domains": 3,
+        "examples": [
+          "premierhomeremodeling.net",
+          "footasylum.com",
+          "abbikadabbisbakingco.com"
+        ]
+      },
+      {
+        "name": "website-files.com",
+        "domains": 2,
+        "examples": [
+          "253media.com",
+          "ideenhunger.com"
+        ]
+      },
+      {
+        "name": "vimeocdn.com",
+        "domains": 2,
+        "examples": [
+          "2020wealthadvisory.com",
+          "sdmdjentertainment.com"
+        ]
+      },
+      {
+        "name": "hs-banner.com",
+        "domains": 2,
+        "examples": [
+          "aaice.net",
+          "a3sec.com"
+        ]
+      },
+      {
+        "name": "hscollectedforms.net",
+        "domains": 2,
+        "examples": [
+          "aaice.net",
+          "a3sec.com"
+        ]
+      },
+      {
+        "name": "cloudfront.net",
+        "domains": 2,
+        "examples": [
+          "produkttheater.de",
+          "domekvefaru.com"
+        ]
+      },
+      {
+        "name": "adtrafficquality.google",
+        "domains": 2,
+        "examples": [
+          "3bsexcavating.com",
+          "deepseass.com"
+        ]
+      },
+      {
+        "name": "godaddy.com",
+        "domains": 2,
+        "examples": [
+          "makpharma-eg.com",
+          "cmc01village.com"
+        ]
+      },
+      {
+        "name": "wix.com",
+        "domains": 2,
+        "examples": [
+          "eclairage-solaire-occitanie.com",
+          "needaphysio.com"
+        ]
+      },
+      {
+        "name": "filesusr.com",
+        "domains": 1,
+        "examples": [
+          "trs-energycontrol.de"
+        ]
+      },
+      {
+        "name": "yandex.com",
+        "domains": 1,
+        "examples": [
+          "gutendorf.ru"
+        ]
+      },
+      {
+        "name": "mistore.jp",
+        "domains": 1,
+        "examples": [
+          "imgs.co.jp"
+        ]
+      },
+      {
+        "name": "printfriendly.com",
+        "domains": 1,
+        "examples": [
+          "newbeaverborough.org"
+        ]
+      },
+      {
+        "name": "forecast7.com",
+        "domains": 1,
+        "examples": [
+          "newbeaverborough.org"
+        ]
+      }
+    ],
+    "dnsVerificationTokens": [
+      {
+        "name": "google",
+        "domains": 1,
+        "examples": [
+          "lojatatical.com.br"
+        ]
+      },
+      {
+        "name": "ms",
+        "domains": 1,
+        "examples": [
+          "ecolab.com"
+        ]
+      }
+    ]
+  }
 }

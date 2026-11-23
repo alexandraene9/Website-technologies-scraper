@@ -12,6 +12,7 @@ import { collectDns } from "./collectors/dnsCollector.js";
 import { collectTls } from "./collectors/tlsCollector.js";
 import { closeBrowser, collectBrowser } from "./collectors/browserCollector.js";
 import { extractFromHtml } from "./collectors/extractHtml.js";
+import { collectPages } from "./collectors/pagesCollector.js";
 import { writeCsv, writeJson } from "./output/writers.js";
 import { buildSummary } from "./output/summary.js";
 import type { DomainRaw, DomainResult, Layer, PageSignals } from "./types.js";
@@ -19,6 +20,7 @@ import type { DomainRaw, DomainResult, Layer, PageSignals } from "./types.js";
 interface Options {
   command: "scan" | "detect";
   browser: boolean;
+  pages: boolean;
   fresh: boolean;
   refresh: Layer[];
   limit?: number;
@@ -27,10 +29,11 @@ interface Options {
 }
 
 function parseArgs(argv: string[]): Options {
-  const opts: Options = { command: (argv[0] as Options["command"]) ?? "scan", browser: true, fresh: false, refresh: [], input: config.paths.input };
+  const opts: Options = { command: (argv[0] as Options["command"]) ?? "scan", browser: true, pages: true, fresh: false, refresh: [], input: config.paths.input };
   for (let i = 1; i < argv.length; i++) {
     const a = argv[i]!;
     if (a === "--no-browser") opts.browser = false;
+    else if (a === "--no-pages") opts.pages = false;
     else if (a === "--fresh") opts.fresh = true;
     else if (a === "--refresh") opts.refresh = argv[++i]!.split(",").map((s) => s.trim() as Layer);
     else if (a === "--limit") opts.limit = Number(argv[++i]);
@@ -137,7 +140,15 @@ async function collectDomain(domain: string, db: FingerprintDb, opts: Options, b
     }
   }
 
-  for (const l of ["http", "browser", "dns", "tls"] as Layer[]) raw.errors.push(...keepErrors(l));
+  if (opts.pages && !have.has("pages")) {
+    const home = raw.layers.find((l) => l.layer === "http");
+    if (home?.html && raw.finalUrl) {
+      const pages = await timed(raw, "pages", () => collectPages(raw.finalUrl!, home.html!));
+      if (pages) raw.layers.push(...pages);
+    }
+  }
+
+  for (const l of ["http", "browser", "dns", "tls", "pages"] as Layer[]) raw.errors.push(...keepErrors(l));
   const webLayers = raw.layers.filter((l) => l.layer === "http" || l.layer === "browser");
   raw.status = webLayers.length ? "ok" : raw.layers.length ? "partial" : "unreachable";
   saveRaw(raw);
@@ -174,7 +185,7 @@ function writeOutputs(db: FingerprintDb, raws: DomainRaw[]) {
   const t0 = Date.now();
   const results = raws.map((r) => toResult(db, r)).sort((a, b) => a.domain.localeCompare(b.domain));
   const hitsByDomain = new Map(raws.map((r) => [r.domain, hitsFor(db, r)] as const));
-  const summary = buildSummary(db, hitsByDomain, results);
+  const summary = buildSummary(db, hitsByDomain, results, raws);
   console.log(`detection took ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   writeJson(path.join(config.paths.out, "results.json"), results);
   writeCsv(path.join(config.paths.out, "results.csv"), results);

@@ -25,7 +25,7 @@ export async function collectHttp(domain: string): Promise<HttpResult> {
   throw new Error(errors.join(" | "));
 }
 
-async function fetchPage(startUrl: string, tried: string[]): Promise<HttpResult> {
+export async function fetchPage(startUrl: string, tried: string[], withRobots = true): Promise<HttpResult> {
   const headers: Record<string, string[]> = {};
   const cookies: Record<string, string> = {};
   const urls: string[] = [];
@@ -64,7 +64,7 @@ async function fetchPage(startUrl: string, tried: string[]): Promise<HttpResult>
   const buf = Buffer.from(await res.arrayBuffer());
   const html = buf.subarray(0, config.maxHtmlBytes).toString("utf8");
   const extracted = extractFromHtml(html, url);
-  const robots = await fetchRobots(url);
+  const robots = withRobots ? await fetchRobots(url) : undefined;
   return {
     finalUrl: url,
     status: res.status,

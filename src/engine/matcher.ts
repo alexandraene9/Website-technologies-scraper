@@ -189,6 +189,16 @@ export function resolveDetections(db: FingerprintDb, hits: Hit[]): Detection[] {
     });
   }
 
+  const applyExcludes = () => {
+    for (const d of [...detected.values()]) {
+      const tech = db.techs.get(d.name);
+      if (!tech || !detected.has(d.name)) continue;
+      for (const ex of tech.excludes) detected.delete(ex);
+    }
+  };
+  // excluded technologies must not imply anything, so excludes run before and after implies
+  applyExcludes();
+
   let changed = true;
   while (changed) {
     changed = false;
@@ -235,11 +245,7 @@ export function resolveDetections(db: FingerprintDb, hits: Hit[]): Detection[] {
     });
     if (!ok) detected.delete(d.name);
   }
-  for (const d of [...detected.values()]) {
-    const tech = db.techs.get(d.name);
-    if (!tech) continue;
-    for (const ex of tech.excludes) detected.delete(ex);
-  }
+  applyExcludes();
 
   return [...detected.values()].sort((a, b) => b.confidence - a.confidence || a.name.localeCompare(b.name));
 }

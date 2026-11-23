@@ -1,0 +1,17 @@
+{
+  "method": "Opened each site live in a real browser, checked that every detection's evidence is present on the live page (script URLs, network hosts, JS globals, DOM elements, meta tags, response headers) and judged whether the evidence really means the technology is used. DNS and TLS evidence was judged from the records themselves.",
+  "domains": {
+    "herbalwise.ie": {"platform": "Shopify", "detections": 27, "wrong": ["Trident AB (matched 'trident' in Internet Explorer detection code)"]},
+    "gapconstructionwi.com": {"platform": "Wix", "detections": 26, "wrong": ["WordPress.com (Wix config flag 'ImportFromWordPressInsideMenu')", "WordPress", "PHP", "MySQL (all three implied by WordPress.com)", "Sirvoy and Store Vantage (Wix's own svSession cookie)", "Onsen UI ('onsen' inside 'cookie-consent')"]},
+    "cultivateventures.co.nz": {"platform": "Squarespace", "detections": 16, "wrong": ["Bootstrap (file name 'cart-bootstrap')", "parallax.js (Squarespace parallax image effect)", "Stimulus (Squarespace's own data-controller attributes)"]},
+    "11thhourracing.org": {"platform": "Webflow", "detections": 32, "wrong": ["AccessiWay (accessiBe's accessWidget object, accessiBe is detected separately)"]},
+    "insieme.stanford.edu": {"platform": "Drupal / Acquia", "detections": 18, "wrong": ["Cloudflare (implied by cdnjs, the site itself is not behind Cloudflare)"]},
+    "footasylum.com": {"platform": "Next.js", "detections": 37, "wrong": ["Amazon S3 (a third-party bucket listed in the CSP header, nothing loaded from S3)"]},
+    "empresasori.com": {"platform": "WordPress + WooCommerce", "detections": 30, "wrong": []},
+    "a3sec.com": {"platform": "HubSpot CMS", "detections": 30, "wrong": []},
+    "959marine.com": {"platform": "Weebly", "detections": 19, "wrong": []},
+    "ecolab.com": {"platform": "Sitecore + Next.js on Vercel", "detections": 40, "wrong": []}
+  },
+  "totals": {"detections": 275, "wrong": 14, "precision": 0.949},
+  "fixed": "11 of the 14 false positives were caused by upstream patterns that are too broad. They are fixed with overrides in data/custom/technologies.json (Wix excludes, stricter patterns for Trident AB, Onsen UI, Bootstrap, parallax.js, Stimulus) and by applying excludes before implies. On the full dataset the fixes removed about 50 domain/technology pairs."
+}
