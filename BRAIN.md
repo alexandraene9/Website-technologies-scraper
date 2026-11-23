@@ -13,7 +13,7 @@
 1. Review the README once more and change wording where needed.
 2. Check suspicious detections in `output/results.json` or `output/summary.json`.
 3. Confirm there are no personal or temporary paths in final files.
-4. Git init, first commit and push to GitHub.
+4. Commit the final changes and push them to GitHub.
 
 ## Decisions
 

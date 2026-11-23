@@ -1,6 +1,10 @@
 # Website Technologies Scraper
 
-This project takes the 200 domains from `data/domains.parquet` and tries to identify the technologies used by each website. I report CMS platforms, e-commerce tools, analytics, marketing scripts, CDNs, hosting, email providers and many other categories.
+## Task
+
+This is my solution for the SW Engineer Intern take home challenge. The sales team needs to find Shopify stores that use competing analytics or marketing products, so the tool finds technologies used by a website and keeps evidence for every detection.
+
+The challenge gives a list of 200 domains and mentions 477 technologies as a reference. I use `data/domains.parquet` as the input and try to detect as many technologies as possible.
 
 For each match, I keep the actual evidence: a header, cookie, script URL, DOM element, JavaScript variable or DNS record.
 
