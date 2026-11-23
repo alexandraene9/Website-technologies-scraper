@@ -1,0 +1,9 @@
+{
+  "$comment": "Own signatures in the same schema as data/fingerprints. Merged over the upstream definitions at load time (arrays are concatenated, objects merged). Found by listing third-party hosts that no existing rule explained.",
+  "Canva": {
+    "xhr": ["canva-embed\\.com"]
+  },
+  "Font Awesome": {
+    "xhr": ["(?:ka-f|kit|use|ka-p)\\.fontawesome\\.com"]
+  }
+}

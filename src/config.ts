@@ -1,0 +1,24 @@
+export const config = {
+  userAgent:
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  acceptLanguage: "en-US,en;q=0.9",
+  httpTimeoutMs: 15000,
+  browserTimeoutMs: 30000,
+  browserSettleMs: 4000,
+  browserHardTimeoutMs: 75000,
+  maxCapturedBodyBytes: 4_000_000,
+  layerHardTimeoutMs: { http: 60000, browser: 90000, dns: 60000, tls: 20000 },
+  dnsTimeoutMs: 5000,
+  tlsTimeoutMs: 8000,
+  httpConcurrency: 16,
+  browserConcurrency: 4,
+  maxHtmlBytes: 3_000_000,
+  maxInlineScriptBytes: 200_000,
+  paths: {
+    input: "data/domains.parquet",
+    fingerprints: "data/fingerprints",
+    custom: "data/custom/technologies.json",
+    raw: "output/raw",
+    out: "output",
+  },
+};

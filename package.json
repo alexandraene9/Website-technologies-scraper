@@ -1,0 +1,32 @@
+{
+  "name": "website-tech-scraper",
+  "version": "0.1.0",
+  "description": "Detects the technologies used by websites and explains why (evidence per detection).",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "scan": "tsx src/index.ts scan",
+    "scan:static": "tsx src/index.ts scan --no-browser",
+    "detect": "tsx src/index.ts detect",
+    "fingerprints:update": "tsx scripts/update-fingerprints.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "rescan:browser": "tsx src/index.ts scan --refresh browser"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "hyparquet": "^1.33.1",
+    "p-limit": "^7.3.3",
+    "playwright": "^1.65.1",
+    "undici": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

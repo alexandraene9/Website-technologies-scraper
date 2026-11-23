@@ -1,0 +1,470 @@
+{
+  "generatedAt": "2026-11-23T15:01:26.524Z",
+  "domains": 200,
+  "status": {
+    "ok": 190,
+    "partial": 10,
+    "unreachable": 0
+  },
+  "distinctTechnologies": 451,
+  "domainTechnologyPairs": 2994,
+  "minConfidence": 50,
+  "lowConfidence": {
+    "distinctTechnologies": 21,
+    "pairs": 132,
+    "distinctIncludingLowConfidence": 462
+  },
+  "cumulativeByLayer": [
+    {
+      "layers": "http",
+      "distinctTechnologies": 286,
+      "domainTechnologyPairs": 2072
+    },
+    {
+      "layers": "http + browser",
+      "distinctTechnologies": 400,
+      "domainTechnologyPairs": 2649
+    },
+    {
+      "layers": "http + browser + dns",
+      "distinctTechnologies": 447,
+      "domainTechnologyPairs": 2863
+    },
+    {
+      "layers": "http + browser + dns + tls",
+      "distinctTechnologies": 451,
+      "domainTechnologyPairs": 2994
+    }
+  ],
+  "topTechnologies": [
+    {
+      "name": "Let's Encrypt",
+      "count": 115
+    },
+    {
+      "name": "jQuery",
+      "count": 108
+    },
+    {
+      "name": "Open Graph",
+      "count": 106
+    },
+    {
+      "name": "MySQL",
+      "count": 81
+    },
+    {
+      "name": "PHP",
+      "count": 79
+    },
+    {
+      "name": "Priority Hints",
+      "count": 76
+    },
+    {
+      "name": "WordPress",
+      "count": 75
+    },
+    {
+      "name": "Cloudflare",
+      "count": 72
+    },
+    {
+      "name": "HTTP/3",
+      "count": 72
+    },
+    {
+      "name": "Google Font API",
+      "count": 69
+    },
+    {
+      "name": "RSS",
+      "count": 68
+    },
+    {
+      "name": "jQuery Migrate",
+      "count": 64
+    },
+    {
+      "name": "HSTS",
+      "count": 61
+    },
+    {
+      "name": "Google Tag Manager",
+      "count": 60
+    },
+    {
+      "name": "Font Awesome",
+      "count": 56
+    },
+    {
+      "name": "core-js",
+      "count": 55
+    },
+    {
+      "name": "Google Analytics",
+      "count": 51
+    },
+    {
+      "name": "Cloudflare Bot Management",
+      "count": 42
+    },
+    {
+      "name": "Twitter Emoji (Twemoji)",
+      "count": 42
+    },
+    {
+      "name": "Apache HTTP Server",
+      "count": 41
+    },
+    {
+      "name": "Nginx",
+      "count": 41
+    },
+    {
+      "name": "Microsoft 365",
+      "count": 40
+    },
+    {
+      "name": "jQuery UI",
+      "count": 37
+    },
+    {
+      "name": "Bootstrap",
+      "count": 34
+    },
+    {
+      "name": "Swiper",
+      "count": 33
+    },
+    {
+      "name": "Yoast SEO",
+      "count": 32
+    },
+    {
+      "name": "GoDaddy",
+      "count": 26
+    },
+    {
+      "name": "reCAPTCHA",
+      "count": 26
+    },
+    {
+      "name": "Google Workspace",
+      "count": 23
+    },
+    {
+      "name": "React",
+      "count": 23
+    },
+    {
+      "name": "Contact Form 7",
+      "count": 21
+    },
+    {
+      "name": "Google Maps",
+      "count": 20
+    },
+    {
+      "name": "Elementor",
+      "count": 20
+    },
+    {
+      "name": "Cloudflare DNS",
+      "count": 20
+    },
+    {
+      "name": "GSAP",
+      "count": 19
+    },
+    {
+      "name": "Cart Functionality",
+      "count": 18
+    },
+    {
+      "name": "LiteSpeed",
+      "count": 17
+    },
+    {
+      "name": "Akamai",
+      "count": 17
+    },
+    {
+      "name": "Modernizr",
+      "count": 17
+    },
+    {
+      "name": "jsDelivr",
+      "count": 15
+    }
+  ],
+  "topCategories": [
+    {
+      "name": "JavaScript libraries",
+      "count": 520
+    },
+    {
+      "name": "Miscellaneous",
+      "count": 293
+    },
+    {
+      "name": "WordPress plugins",
+      "count": 196
+    },
+    {
+      "name": "Font scripts",
+      "count": 191
+    },
+    {
+      "name": "Security",
+      "count": 158
+    },
+    {
+      "name": "CDN",
+      "count": 133
+    },
+    {
+      "name": "SSL/TLS certificate authorities",
+      "count": 133
+    },
+    {
+      "name": "Analytics",
+      "count": 117
+    },
+    {
+      "name": "Web servers",
+      "count": 116
+    },
+    {
+      "name": "CMS",
+      "count": 111
+    },
+    {
+      "name": "Hosting",
+      "count": 107
+    },
+    {
+      "name": "JavaScript frameworks",
+      "count": 93
+    },
+    {
+      "name": "Programming languages",
+      "count": 90
+    },
+    {
+      "name": "Performance",
+      "count": 86
+    },
+    {
+      "name": "Blogs",
+      "count": 85
+    },
+    {
+      "name": "Databases",
+      "count": 82
+    },
+    {
+      "name": "Page builders",
+      "count": 75
+    },
+    {
+      "name": "Email",
+      "count": 73
+    },
+    {
+      "name": "Webmail",
+      "count": 70
+    },
+    {
+      "name": "Tag managers",
+      "count": 63
+    },
+    {
+      "name": "PaaS",
+      "count": 47
+    },
+    {
+      "name": "UI frameworks",
+      "count": 46
+    },
+    {
+      "name": "Ecommerce",
+      "count": 44
+    },
+    {
+      "name": "SEO",
+      "count": 42
+    },
+    {
+      "name": "Reverse proxies",
+      "count": 41
+    }
+  ],
+  "errors": [
+    {
+      "name": "tls: DNS not found",
+      "count": 9
+    },
+    {
+      "name": "http: DNS not found",
+      "count": 8
+    },
+    {
+      "name": "browser: net::ERR_NAME_NOT_RESOLVED",
+      "count": 8
+    },
+    {
+      "name": "tls: TLS/certificate",
+      "count": 2
+    },
+    {
+      "name": "browser: timeout",
+      "count": 2
+    },
+    {
+      "name": "http: HTTP 409 at http://1stclairavewest.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://1stlocksheathscouts.org.uk/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 409 at http://1ststopsupply.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://2ldm.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://3xd.co.uk/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://5starremoval.weebly.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 409 at http://aardvarkelectriccorp.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://americansolutions.com.br/congelado.html",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 500 at https://antikebau.de/",
+      "count": 1
+    },
+    {
+      "name": "tls: timeout",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://chavchavadze-m2-41-tbilisi.booked.net/",
+      "count": 1
+    },
+    {
+      "name": "tls: connection refused",
+      "count": 1
+    },
+    {
+      "name": "http: connection refused",
+      "count": 1
+    },
+    {
+      "name": "browser: net::ERR_CONNECTION_REFUSED",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://concrete-fitness.edan.io/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://eclairage-solaire-occitanie.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at http://www.everhartsoutdoor.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://familybroker.cz/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://fisherinvestments.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 526 at https://globalrn.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 503 at https://haus-muehlenfeld-pommerby.de/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://joseph-herber.business.site/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 404 at https://la-residenza-del-principe-rome-it.booked",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 503 at https://nevsproductions.com/",
+      "count": 1
+    },
+    {
+      "name": "http: https://powercleaning.services/: fetch failed (ERR_HTTP2_STR",
+      "count": 1
+    },
+    {
+      "name": "browser: net::ERR_EMPTY_RESPONSE",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 503 at https://www.sindacatobadanti.it/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://soziale-dreigliederung.de/",
+      "count": 1
+    },
+    {
+      "name": "http: timeout",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://www.stwannas.com/",
+      "count": 1
+    },
+    {
+      "name": "http: HTTP 403 at https://p2-1.afp24.net/true1.php?id=weis44j4dh3o",
+      "count": 1
+    }
+  ],
+  "shopifyLeads": [
+    {
+      "domain": "herbalwise.ie",
+      "analytics": [
+        "Google Analytics",
+        "TikTok Pixel"
+      ],
+      "marketing": [
+        "Trident AB",
+        "Zotabox"
+      ]
+    },
+    {
+      "domain": "unnames.com",
+      "analytics": [
+        "Facebook Pixel",
+        "Google Analytics"
+      ],
+      "marketing": []
+    }
+  ]
+}
